@@ -67,6 +67,7 @@ module Guard
     def start
       UI.info "Guard::Compass is watching at your stylesheets."
       create_updater
+      perform if options[:all_on_start]
       true
     end
 

@@ -8,6 +8,7 @@
 #
 # * :workging_directory => Define the Compass working directory, relative to the Guardfile directory
 # * :configuration_file => Path to the Compass configuration file, relative to :project_path
+# * :all_on_start => Boolean for whether or not to compile assets when guard is started - defaults to false
 #
 # Like usual, the Compass configuration path are relative to the :project_path
 
