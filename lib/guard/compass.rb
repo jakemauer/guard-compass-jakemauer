@@ -12,9 +12,7 @@ module Guard
   class Compass < Guard
     attr_reader :updater, :working_path
     attr_accessor :reporter
-
-    VERSION = '0.0.7'
-
+    
     def initialize(watchers = [], options = {})
       super
       @reporter = Reporter.new
@@ -65,8 +63,8 @@ module Guard
 
     # Compile all the sass|scss stylesheets
     def start
-      UI.info "Guard::Compass is watching at your stylesheets."
       create_updater
+      reporter.announce "Guard::Compass is waiting to compile your stylesheets."
       perform if options[:all_on_start]
       true
     end
